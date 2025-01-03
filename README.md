@@ -6,9 +6,9 @@ Will first be doing the minumum to get the examples to build.
 Only when every example at the intro is working do I finish the rest of the includes.
 
 ### Usage:
-'''sh
+```console
 zig build run -Dexample="hello"
-'''
+```
 
 ### Requirements:
 [zig-13.0](https://ziglang.org) is required for cpp compiler and building.
