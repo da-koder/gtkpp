@@ -7,7 +7,7 @@ Only when every example at the intro is working do I finish the rest of the incl
 
 ### Usage:
 ```console
-zig build run -Dexample="hello"
+zig build run -Dexample="2_hello"
 ```
 
 ### Requirements:
