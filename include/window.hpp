@@ -14,6 +14,8 @@ public:
     Window(Type);
     Window(GtkWidget* w);
     Window(Type, const char*);
+
+    void setTitle(const char*);
 };
 };
 

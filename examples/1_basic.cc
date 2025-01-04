@@ -5,11 +5,11 @@
 class myApp : public gtk::Application {
 public:
     myApp(const char* id) : gtk::Application(id) { 
-        connect("activate", WIDGET_CALLBACK(&myApp::activate));
+        connect("activate", WIDGET_CALLBACK(&myApp::activate), nullptr);
     }
     
     void activate(gpointer udata) {
-        gtk::Container* win = newWindow();
+        gtk::Widget* win = newWindow();
         win->showAll();
     }
 };

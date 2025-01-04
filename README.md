@@ -16,7 +16,7 @@ zig build run -Dexample="hello"
 ### Todos:
 - [x] basic
 - [x] hello
-- [ ] packing
+- [x] packing
 - [ ] custom drawing
 - [ ] packing with builder
 - [ ] 1 trivial app
