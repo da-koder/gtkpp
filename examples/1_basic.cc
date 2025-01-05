@@ -5,7 +5,7 @@
 class myApp : public gtk::Application {
 public:
     myApp(const char* id) : gtk::Application(id) { 
-        connect("activate", WIDGET_CALLBACK(&myApp::activate), nullptr);
+        connect("activate", CALLBACK(&myApp::activate), nullptr);
     }
     
     void activate(gpointer udata) {

@@ -17,10 +17,12 @@ pub fn build(b: *std.Build) void {
         "src/window.cc",
         "src/button.cc",
         "src/grid.cc",
+        "src/object.cc",
     }, .flags = &.{ "-std=c++11"}});
     lib.addIncludePath(b.path("include"));
     lib.linkLibCpp();
     lib.linkSystemLibrary("gtk+-3.0");
+    lib.linkSystemLibrary("gobject-2.0");
 
     b.installArtifact(lib);
 
@@ -36,6 +38,7 @@ pub fn build(b: *std.Build) void {
     exe.linkLibCpp();
     exe.linkLibrary(lib);
     lib.linkSystemLibrary("gtk+-3.0");
+    lib.linkSystemLibrary("gobject-2.0");
     
     b.installArtifact(exe);
 

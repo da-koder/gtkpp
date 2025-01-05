@@ -6,6 +6,7 @@
 
 #include "container.hpp"
 
+
 namespace gtk {
 typedef GtkWindowType Type;
 

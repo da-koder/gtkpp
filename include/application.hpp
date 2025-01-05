@@ -4,11 +4,12 @@
 //#include "pch.h"
 #include <gtk/gtk.h>
 
-#include "widget.hpp"
+#include "object.hpp"
 #include "window.hpp"
 
+
 namespace gtk {
-class Application : public Widget {
+class Application : public g::Object {
 public:
     Application(const char* id, GApplicationFlags flag = G_APPLICATION_DEFAULT_FLAGS);
     Window* newWindow();
