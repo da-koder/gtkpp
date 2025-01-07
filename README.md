@@ -17,8 +17,8 @@ zig build run -Dexample="2_hello"
 - [x] basic
 - [x] hello
 - [x] packing
+- [x] builder
 - [ ] custom drawing
-- [ ] packing with builder
 - [ ] 1 trivial app
 - [ ] 2 populate window
 - [ ] 3 opening files
