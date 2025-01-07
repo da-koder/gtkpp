@@ -7,7 +7,7 @@
 
 #include "object.hpp"
 
-#define WIDGET(obj) (static_cast<gtk::Widget*>(obj))
+#define WIDGET(obj) (reinterpret_cast<gtk::Widget*>(obj))
 
 namespace gtk {
 #define WIDGET_CALLBACK(fn) (reinterpret_cast<g::DelegateType>(fn))
@@ -19,6 +19,7 @@ namespace gtk {
 class Widget : public g::Object {
 public:
     Widget(GtkWidget*);
+    Widget(g::Object*);
 
     void showAll();
     void destroy();

@@ -18,6 +18,7 @@ pub fn build(b: *std.Build) void {
         "src/button.cc",
         "src/grid.cc",
         "src/object.cc",
+        "src/builder.cc"
     }, .flags = &.{ "-std=c++11"}});
     lib.addIncludePath(b.path("include"));
     lib.linkLibCpp();

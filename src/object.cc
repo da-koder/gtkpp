@@ -26,12 +26,17 @@ DelegateInfo Object::getDelegateInfo(const char* siganal) {
     return delegate_map[siganal];
 }
 
+void Object::connect(const char*siganal, GCallback fn, gpointer udata) {
+    g_signal_connect(m_object, siganal, fn, udata);
+}
+
 void Object::connect(const char* siganal, DelegateType delegate, gpointer u_data) {
     delegate_map[siganal] = { this, delegate, u_data };
     //printf("Setting call back: %p, for signal %s.\n", delegate, siganal);
     m_info = { siganal, this };
     g_signal_connect(m_object, siganal, reinterpret_cast<GCallback>(&call_callback), &m_info);
 }
+
 void Object::connect(const char* siganal, Object* d_w, DelegateType delegate, gpointer u_data) {
     delegate_map[siganal] = { d_w, delegate, u_data };
     //printf("Setting call back: %p, for signal %s.\n", delegate, siganal);

@@ -9,6 +9,8 @@ namespace gtk {
 class Button : public Widget {
 public:
     Button();
+    Button(GtkWidget*);
+    //Button(GtkButton*);
     Button(const char*);
 };
 };

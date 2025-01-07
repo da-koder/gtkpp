@@ -31,6 +31,7 @@ public:
     Object(GObject*);
     Object(GType t);
 
+    void connect(const char*, GCallback, gpointer);
     void connect(const char*, DelegateType, gpointer); //maps delegates
     void connect(const char* siganal, Object* d_w, DelegateType delegate, gpointer u_data); 
     DelegateInfo getDelegateInfo(const char*);
